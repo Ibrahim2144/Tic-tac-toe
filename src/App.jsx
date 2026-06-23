@@ -54,8 +54,8 @@ export default function TicTacToe() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-400 flex flex-col items-center justify-center p-6 font-sans select-none text-slate-800">
-      <div className="max-w-md w-full flex flex-col items-center gap-8">
+    <div className="min-h-screen bg-gray-400 flex flex-col items-center justify-center p-2 font-sans select-none text-slate-800">
+      <div className="max-w-md w-full flex flex-col items-center gap-6">
         
         {/* Title */}
         <h1 className="text-4xl font-black tracking-tight text-slate-900">
@@ -64,18 +64,18 @@ export default function TicTacToe() {
 
         {/* Score Board */}
         <div className="flex gap-6 w-full max-w-xs justify-center">
-          <div className={`flex-1 text-center p-3 rounded-2xl bg-white shadow-sm border-2 transition-all ${isXTurn && !winner && !isDraw ? 'border-indigo-500 scale-105' : 'border-transparent'}`}>
+          <div className={`flex-1 text-center p-2 rounded-2xl bg-white shadow-sm border-2 transition-all ${isXTurn && !winner && !isDraw ? 'border-indigo-500 scale-105' : 'border-transparent'}`}>
             <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Player X</div>
             <div className="text-2xl font-black text-indigo-600">{scores.X}</div>
           </div>
-          <div className={`flex-1 text-center p-3 rounded-2xl bg-white shadow-sm border-2 transition-all ${!isXTurn && !winner && !isDraw ? 'border-pink-500 scale-105' : 'border-transparent'}`}>
+          <div className={`flex-1 text-center p-2 rounded-2xl bg-white shadow-sm border-2 transition-all ${!isXTurn && !winner && !isDraw ? 'border-pink-500 scale-105' : 'border-transparent'}`}>
             <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Player O</div>
             <div className="text-2xl font-black text-pink-600">{scores.O}</div>
           </div>
         </div>
 
         {/* Game Status Announcement */}
-        <div className="h-8 flex items-center justify-center">
+        <div className="h-1 flex items-center justify-center">
           <p className="text-lg font-bold tracking-wide">
             {winner ? (
               <span className="text-emerald-600 animate-bounce block">🎉 Winner: {winner}!</span>
@@ -118,7 +118,7 @@ export default function TicTacToe() {
         {/* Action Controls */}
         <button
           onClick={handleRestart}
-          className="px-6 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold rounded-xl shadow-md active:scale-95 transition-all tracking-wide"
+          className="px-5.5 py-2.75 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold rounded-xl shadow-md active:scale-95 transition-all tracking-wide"
         >
           Reset Board
         </button>
